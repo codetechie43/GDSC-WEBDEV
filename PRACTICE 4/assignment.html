@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <table border="">
+        <caption>Student Information </caption>
+        <tr>
+            <td colspan="2"></td>
+            <td rowspan="2">Name</td>
+            <td colspan="2"> Address </td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td>City </td>
+            <td>House</td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2">info</td>
+            <td>A</td>
+            <td>Delhi</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>Mumbai</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2"></td>
+            <td>C</td>
+            <td>Kolkata</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>Pune</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <form action="/server">
+        <label for="name">Name</label>
+        <input type="text" name="Name" id="name">
+        <br>
+        <br>
+        <div>
+            <label for="Sex">Sex: </label>
+            <input type="radio" name="Sex" id="Male">
+            <label for="Male">Male</label>
+            <input type="radio" name="Sex" id="Female">
+            <label for="Female">Female</label>
+        </div>
+        <br>
+        Country
+        <select name="Country" id="Country">
+            <option value="Select an Option">Select an Option</option>
+            <option value="India is my country">India</option>
+            <option value="USA is doston ki copuntry">USA</option>
+            <option value="Nepal is doston ki copuntry">Nepal</option>
+            <option value="Canada is doston ki copuntry">Canada</option>
+            <option value="Brazil is doston ki copuntry">Brazil</option>
+        </select>
+        <div>
+            <label for="Message">Message</label>
+            <textarea name="Message" id="Message" cols="30" rows="5"
+                placeholder="dil karein woh likhiye and keep in journey dont loose so easily jung abhi baki hai"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label for="checkbox">Subscribe ?</label>
+        </div>
+        <br>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+<br>
+<hr>
+<br>
+    <form action="/server2">
+        <label for="name">Name : </label>
+        <input type="text" name="name" id="name" placeholder="Write your name">
+        <br>
+        <label for="Email">Email : </label>
+        <input type="text" name="Email" id="Email" placeholder="Write your Email">
+<br>
+<label for="Message">Message: </label>
+<textarea name="Message" id="Message" cols="30" rows="5" placeholder="dont loose your hopes write something"></textarea>
+<div>
+    Rate us out of 5:
+    <br>
+    <input type="radio" name="rating" id="rating">
+    <label for="rating">1</label>
+    <br>
+    <input type="radio" name="rating" id="rating">
+    <label for="rating">2</label>
+    <br>
+    <input type="radio" name="rating" id="out of 5">
+    <label for="out of 5">3</label>
+    <br>
+    <input type="radio" name="rating" id="out of 5">
+    <label for="out of 5">4</label>
+    <br>
+    <input type="radio" name="rating" id="out of 5">
+    <label for="out of 5">5</label>
+</div>
+<br>
+<button>Send Your Message</button>
+    </form>
+</body>
+
+</html>

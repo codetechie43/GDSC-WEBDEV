@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+
+<body>
+    <form action="/server">
+    <input type="checkbox" name="age" id="age">
+     <label for="age">I am 18+ </label>
+     <div>
+        <input type="radio" name="fruit" id="apple" value="apple">
+        <label for="apple">apple</label>
+        <input type="radio" name="fruit" id="mango" value="mango">
+        <label for="apple">mango</label>
+        <input type="radio" name="fruit" id="chiku" value="chiku">
+        <label for="apple">chiku</label>
+     </div>
+     <br>
+     Choose Your subjects
+     <input type="checkbox" name="subjects" id="math" value="math">
+     <label for="math">math </label>
+     <input type="checkbox" name="subjects" id="science" value="science">
+     <label for="science">science </label>
+     <input type="checkbox" name="subjects" id="cybersecurity" value="cybersecurity">
+     <label for="cybersecurity">cybersecurity</label>
+     <input type="checkbox" name="subjects" id="coding" value="coding">
+     <label for="coding">coding</label>
+     <br>
+     Choose Your Profession
+     <select name="Profession" id="Profession">
+        <option value="Select Your Option">Select your option</option>
+        <option value="I am Student">Student</option>
+        <option value="I am Hacker">Hacker</option>
+     </select>
+        <br>
+        <input 
+        type="range" 
+        id="volume" 
+        min="0" 
+        max="100" 
+        name="volume" 
+        step="" 
+        value="77">
+        <label for="volume">Select your volume level</label>
+        <br>
+        <label for="Feedback">Give your Valuable Feedback</label>
+        <textarea name="Feedback" id="Feedback" cols="10" rows="5" name="Feedback" placeholder="Write your Feedback"></textarea>
+     <button>submit</button>
+    </form>
+</body>
+
+</html>
