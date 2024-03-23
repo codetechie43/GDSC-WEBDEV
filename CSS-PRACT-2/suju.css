@@ -1,0 +1,42 @@
+#mainTopic{
+    color: blue;
+}
+
+*{
+    text-align: center;
+}
+
+h1,h3,h5{
+font-style: Georgia;
+}
+
+.content{
+    color: white ;
+    background-color: cornflowerblue;
+}
+
+div button {
+    background-color: purple;
+    color: azure;
+}
+
+div button:hover{
+    background-color:yellow;
+    color: blue;
+}
+
+p:nth-of-type(3n){
+    color: yellow;
+}
+
+#yes{
+    color: green;
+}
+h4{
+    background-color: cornflowerblue;
+    font-weight: bold;
+}
+
+h1::first-letter{
+color: red;
+}

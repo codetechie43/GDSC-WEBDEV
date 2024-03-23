@@ -1,0 +1,43 @@
+.conatainer{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.conatainer div{
+    height: 100px;
+    width: 100px;
+     border: 2px solid black;
+    border-radius: 10px;
+    font-size: 50px;
+    background-color: grey;
+    text-align: center; 
+  
+}
+
+.navbar{
+height:50px;
+width: 900px;
+display: flex;
+border: 2px solid lightgreen;
+background-color: pink;
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+}
+
+.option{
+    height: 50px;
+    width: 80px;
+    border-radius: 10px; 
+    margin-left: 50px;
+    font-size: 24px;
+    line-height: 50px;
+}

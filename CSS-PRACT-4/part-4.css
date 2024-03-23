@@ -1,0 +1,46 @@
+ #box1 {
+    width: 100px;
+    height: 100px;
+    background: green;
+    transition: width 2s ease-in 0.5s;
+    }
+
+    #box1:hover {
+    width: 600px;
+    }
+
+    #box2 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        /* transform:right 200px;
+        transform: bottom 200px;
+        transform: rotate(90deg); */
+        transform: translate(200px,200px) rotate(90deg);
+        }
+
+    #box3{
+        width: 100px;
+        height: 100px;
+        background: cornflowerblue;
+        transform: skewX(20deg);
+    
+    }
+
+    #box4{
+        width: 100px;
+        height: 100px;
+        background: pink;
+        box-shadow: 2px 2px 5px green;
+        
+    }
+
+    #myPic{
+        
+        width: 200px;
+        height: 200px;
+        background: pink;
+        background-image: url("background.jpg");
+        background-size: cover;
+        opacity: 50%;
+    } 

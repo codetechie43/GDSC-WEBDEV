@@ -1,0 +1,30 @@
+h1{
+    background-color: greenyellow;
+    color: black;
+    border: 2px solid black;
+}
+
+@media(width: 400px) {
+    h1{
+        background-color: cornflowerblue;
+    }
+    div{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+}
+
+@media (min-width:200px) and (max-width:400px){
+    h1{
+        background-color: gold;
+    }
+
+}
+
+@media(orientation: landscape){
+    \h1{
+        background-color: aqua;
+        color: brown;
+    }
+}

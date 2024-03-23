@@ -1,0 +1,36 @@
+div{
+    height: 200px;
+    width: 500px;
+    background-color: aqua;
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: black; */
+    border: 5px solid black ;
+    /* border-left: red;
+    border-left-style: dotted ;
+    border-top: 5px dotted pink; */
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin: 25px;
+}
+
+h1{
+    /* border-width: 2px;
+    border-style: dotted;
+    border-color: green; */
+    border: 10px dotted green;
+    /* border-radius: 50%; */
+    margin: 5px;
+}
+
+button{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: aqua;
+    margin-top: 20px;
+}

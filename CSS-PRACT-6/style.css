@@ -1,0 +1,26 @@
+.container{
+    width: 600px;
+    height: 300px;
+    background-color: yellow;;
+    display: grid;
+     grid-template-rows: 1fr 1fr  1fr ;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    /* justify-content:end ;
+    align-items: end; */
+    place-items: center;
+
+}
+
+.item{
+      width: 50px; 
+    height: 30px;  
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* #one{
+    justify-self: end;
+    align-self: end;
+} */
