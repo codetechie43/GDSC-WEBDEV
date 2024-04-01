@@ -1,7 +1,3 @@
-/*
-This program implements a simple To-Do List application with basic functionalities such as adding, deleting, editing, and marking todos as completed. 
-*/
-
 document.addEventListener('DOMContentLoaded', function() {
     // Getting references to HTML elements
     const todoForm = document.getElementById('todo-form'); // Form for adding new todos
@@ -39,28 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
             todoItem.remove(); // Remove the todo item when the delete button is clicked
             showPopup('Todo deleted successfully!'); // Display a success message
         });
-        const editInput = document.createElement('input'); // Create an input field for editing the todo item
-        editInput.type = 'text'; // Set the type of the input field
-        editInput.classList.add('edit'); // Add CSS class to the input field
-        editInput.value = todoText; // Set the initial value of the input field
-        editInput.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                // Update the todo text when Enter key is pressed
-                todoTextElement.textContent = editInput.value;
-                toggleEditMode(todoItem); // Exit edit mode
-                showPopup('Todo edited successfully!'); // Display a success message
-            }
-        });
         const editButton = document.createElement('button'); // Create a button to edit the todo item
         editButton.textContent = 'Edit'; // Set the text content of the edit button
         editButton.addEventListener('click', function() {
-            toggleEditMode(todoItem); // Toggle edit mode when the edit button is clicked
+            openEditDialog(todoTextElement); // Open the edit dialog when the edit button is clicked
         });
         // Append elements to the todo item
         todoItem.appendChild(checkbox);
         todoItem.appendChild(todoTextElement);
         todoItem.appendChild(deleteButton);
-        todoItem.appendChild(editInput);
         todoItem.appendChild(editButton);
         todoList.appendChild(todoItem); // Append the todo item to the todo list
 
@@ -68,26 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
         todoItem.classList.add('fade-in'); // Apply fade-in animation to the todo item
     }
 
-    // Function to toggle edit mode for a todo item
-    function toggleEditMode(todoItem) {
-        const todoTextElement = todoItem.querySelector('span'); // Get the span element containing todo text
-        const editInput = todoItem.querySelector('input[type="text"]'); // Get the input field for editing
-        const editButton = todoItem.querySelector('button'); // Get the edit button
-        const deleteButton = todoItem.querySelector('button'); // Get the delete button
-        if (editInput.style.display === 'none') {
-            // Enter edit mode
-            editInput.value = todoTextElement.textContent; // Set the value of the input field to the current todo text
-            editInput.style.display = 'inline-block'; // Display the input field
-            todoTextElement.style.display = 'none'; // Hide the todo text
-            editButton.textContent = 'Save'; // Change the text content of the edit button to "Save"
-            deleteButton.style.display = 'none'; // Hide the delete button while in edit mode
-        } else {
-            // Exit edit mode
-            todoTextElement.textContent = editInput.value; // Update the todo text with the value of the input field
-            editInput.style.display = 'none'; // Hide the input field
-            todoTextElement.style.display = 'inline-block'; // Display the todo text
-            editButton.textContent = 'Edit'; // Change the text content of the edit button back to "Edit"
-            deleteButton.style.display = 'inline-block'; // Show the delete button after exiting edit mode
+    // Function to open the edit dialog
+    function openEditDialog(todoTextElement) {
+        const todoText = todoTextElement.textContent; // Get the current todo text
+        const updatedTodoText = prompt('Edit Todo:', todoText); // Display a prompt to edit the todo text
+        if (updatedTodoText !== null && updatedTodoText.trim() !== '') {
+            // If the user entered a new todo text, update the todo item
+            todoTextElement.textContent = updatedTodoText.trim(); // Update the todo text
+            showPopup('Todo edited successfully!'); // Display a success message
         }
     }
 
